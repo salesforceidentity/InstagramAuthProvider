@@ -7,17 +7,23 @@ global class InstagramMockHttpResponseGenerator implements HttpCalloutMock {
 
         JSONGenerator gen = JSON.createGenerator(true);
         gen.writeStartObject();
+        gen.writeFieldName('data');
+        gen.writeStartObject();
+            gen.writeobjectfield('id', InstagramTestClass.id);
+            gen.writeobjectfield('username', InstagramTestClass.username);        
+            gen.writeobjectfield('full_name', InstagramTestClass.fullName);
+            gen.writeobjectfield('bio', InstagramTestClass.bio);
+            gen.writeobjectfield('website', InstagramTestClass.website);        
+            gen.writeobjectfield('profile_picture', InstagramTestClass.profilePicture);
+            gen.writeobjectfield('locale', '');
+        gen.writeendobject();
+        gen.writeobjectfield('access_token', InstagramTestClass.oauthToken);
+        gen.writeendobject();
 
-        gen.writeStringField('full_name', InstagramTestClass.fullName);
-        gen.writeStringField('bio', InstagramTestClass.bio);
-        gen.writeStringField('website', InstagramTestClass.website);        
-        gen.writeStringField('profilePicture', InstagramTestClass.profilePicture);
-        gen.writeStringField('access_token', InstagramTestClass.oauthToken);
-        gen.writeEndObject();
 
         // Create a fake response
         HttpResponse res = new HttpResponse();
-        res.setHeader('Content-Type', 'application/xml');
+        res.setHeader('Content-Type', 'application/json');
         res.setBody(gen.getAsString());
         res.setStatusCode(200);
         return res;
