@@ -14,10 +14,12 @@ global class Instagram implements Auth.AuthProviderPlugin {
                }
        
                global PageReference initiate(Map<string,string> authProviderConfiguration, String stateToPropagate) {
+                   System.debug(authProviderConfiguration);
                    authUrl = authProviderConfiguration.get('Auth_URL__c');
                    key = authProviderConfiguration.get('clientID__c');
-                   redirectURL = authProviderConfiguration.get('redirectURL__c');
+                   redirectUrl = authProviderConfiguration.get('redirectURL__c');
                    String url = authUrl + '?client_id='+ key +'&response_type=code&redirect_uri='+ redirectUrl + '&state=' + stateToPropagate;
+                   System.debug(url);
                    return new PageReference(url);
                 }
         
@@ -37,7 +39,7 @@ global class Instagram implements Auth.AuthProviderPlugin {
                    req.setEndpoint(url);
                    req.setHeader('Content-Type','application/json');
                    req.setMethod('POST');
-                   //Instragram expects these values post'ed in like a form
+                   //Instragram expects these values post'ed as if in a form
                    req.setBody('client_id=' + key + '&client_secret=' + secret + '&redirect_uri=' + redirectURL + '&grant_type=authorization_code' + '&code=' + code);
                    
                    HTTPResponse res = http.send(req);
@@ -55,6 +57,7 @@ global class Instagram implements Auth.AuthProviderPlugin {
                      String token = response.oauthToken;
                      HttpRequest req = new HttpRequest();
                      userAPIUrl = authProviderConfiguration.get('UserEndpoint__c');
+                     
                      // Instagram requires access token in the query string
                      req.setEndpoint(userAPIUrl + '?access_token=' + token);
                      req.setHeader('Content-Type','application/json');

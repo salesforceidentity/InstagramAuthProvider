@@ -20,8 +20,8 @@ global class InstagramRegHandler implements Auth.RegistrationHandler{
 **/ 
 global User createUser(Id portalId, Auth.UserData data){
     // optimized for Communities
-    System.debug('Dumping Auth.UserData: ' + data);
     
+    System.debug('Dumping Auth.UserData: ' + data);
     // Is this a Community Context?
         System.debug('Registering Community user: ' + data.username);
         Id contactId;
@@ -56,7 +56,7 @@ global void updateUser(Id userId, Id portalId, Auth.UserData data){
     /**
      * Create a Contact
      * 
-     * @param data - Facebook provided context for the User
+     * @param data - Instagram provided context for the User
      **/
     private Id createContact(Auth.UserData data){
         Contact contact = new Contact();
