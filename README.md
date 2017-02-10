@@ -9,7 +9,7 @@ This project provides an example custom Auth Provider for Instagram.
 
 Getting Started
 ---------------
-Use the [Salesforce Migration Tool](https://developer.salesforce.com/docs/atlas.en-us.daas.meta/daas/meta_development.htm) to install this unpackaged Apex. It will create a Custom Metadata Type as well as an Apex Class for handling the flow with Instagram, and an example Registration Handler as well.
+Use the [Salesforce Migration Tool](https://developer.salesforce.com/docs/atlas.en-us.daas.meta/daas/meta_development.htm) or Workbench to install this unpackaged Apex. It will create a Custom Metadata Type as well as an Apex Class for handling the flow with Instagram, and an example Registration Handler as well.
 
 You will need to create a new Instagram app in their [developer environment](https://www.instagram.com/developer/) in order to get a key and secret.
 

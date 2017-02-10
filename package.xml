@@ -1,11 +1,34 @@
-<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>instagram</fullName>
     <types>
         <members>Instagram</members>
         <members>InstagramMockHttpResponseGenerator</members>
         <members>InstagramRegHandler</members>
+        <members>InstagramRegHandlerTestClass</members>
         <members>InstagramTestClass</members>
         <name>ApexClass</name>
     </types>
-    <version>39.0</version>
+    <types>
+        <members>Instagram_Identity__mdt.Access_Token_URL__c</members>
+        <members>Instagram_Identity__mdt.Auth_URL__c</members>
+        <members>Instagram_Identity__mdt.UserEndpoint__c</members>
+        <members>Instagram_Identity__mdt.clientID__c</members>
+        <members>Instagram_Identity__mdt.clientSecret__c</members>
+        <members>Instagram_Identity__mdt.redirectURL__c</members>
+        <name>CustomField</name>
+    </types>
+    <types>
+        <members>Instagram_Identity.Instagram</members>
+        <name>CustomMetadata</name>
+    </types>
+    <types>
+        <members>Instagram_Identity__mdt</members>
+        <name>CustomObject</name>
+    </types>
+    <types>
+        <members>Instagram_Identity__mdt-Instagram Identity Layout</members>
+        <name>Layout</name>
+    </types>
+    <version>37.0</version>
 </Package>
