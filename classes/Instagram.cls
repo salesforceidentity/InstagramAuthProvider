@@ -36,7 +36,7 @@ global class Instagram extends Auth.AuthProviderPluginClass {
        HttpRequest req = new HttpRequest();
        String url = accessTokenUrl;
        req.setEndpoint(url);
-       req.setHeader('Content-Type','application/json');
+       req.setHeader('Content-Type','application/x-www-form-urlencoded');
        req.setMethod('POST');
        //Instragram expects these values post'ed as if in a form
        req.setBody('client_id=' + key + '&client_secret=' + secret + '&redirect_uri=' + redirectURL + '&grant_type=authorization_code' + '&code=' + code);
