@@ -18,3 +18,7 @@ Once you have a key and secret, you can create your Auth Provider instance. Reco
 Some things to keep in mind
 --------------------------
 Instagam's user model is simple; it doesn't have a lot of attributes. For example, Instagram *does not* have email addresses for its users. (This is true even if the person uses Facebook to log into Instagram.) Because of this, the example Registration Handler has to create an email-like attribute for both the User's email and username fields.
+
+Easier Install Process
+--------
+Although the Apex classes are provided here, you can also use the [this unmanaged package](https://login.salesforce.com/packaging/installPackage.apexp?p0=04t1J000000PzH1) to load this custom Auth Provider into your org.
