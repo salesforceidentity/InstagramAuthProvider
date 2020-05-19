@@ -1,7 +1,7 @@
 InstagramAuthProvider
 =====================
 
-A custom [Auth Provider](https://help.salesforce.com/articleView?id=sso_authentication_providers.htm&type=5) for Instagram
+A custom [Auth Provider](https://help.salesforce.com/articleView?id=sso_authentication_providers.htm&type=5) for Instagram.
 
 Overview
 --------
