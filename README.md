@@ -1,11 +1,11 @@
 InstagramAuthProvider
 =====================
 
-A custom [Auth Provider](https://help.salesforce.com/articleView?id=sso_authentication_providers.htm&type=5) for Instagram.
+A custom [Auth Provider](https://help.salesforce.com/articleView?id=sso_authentication_providers.htm&type=5) for Instagram. Although Instagram has retired its Identity Provider capability and folded it into Facebook's feature set. This custom auth. provider will no longer work. It is still relevant as an example on how to build custom auth. providers. For an up-to-date example and tutorial please check out [Create a Custom External Authentication Provider](https://help.salesforce.com/s/articleView?id=sf.sso_provider_plugin_custom.htm&type=5).
 
 Overview
 --------
-This project provides an example custom Auth Provider for Instagram. 
+This project provides an example custom Auth Provider for Instagram's now defunct IdP.
 
 Getting Started
 ---------------
